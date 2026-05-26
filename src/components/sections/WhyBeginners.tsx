@@ -56,29 +56,6 @@ export function WhyBeginners() {
       <TrianglePattern opacity={0.18} />
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative" style={{ zIndex: 1 }}>
 
-        {/* Stats bar */}
-        <div
-          className="flex items-center mb-16 overflow-hidden rounded-2xl"
-          style={{ border: '1px solid #E8E8E8', background: '#FAFAFA' }}
-        >
-          {stats.map((s, i) => (
-            <div
-              key={s.label}
-              className="flex-1 py-5 px-6 flex flex-col items-center text-center"
-              style={{ borderRight: i < stats.length - 1 ? '1px solid #E8E8E8' : 'none' }}
-            >
-              <span
-                className="text-[#0A0A0A] block leading-none mb-1"
-                style={{ fontFamily: 'Anton, sans-serif', fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', letterSpacing: '0.01em' }}
-              >
-                {s.value}
-              </span>
-              <span style={{ color: '#999999', fontSize: '0.7rem', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 600 }}>
-                {s.label}
-              </span>
-            </div>
-          ))}
-        </div>
 
         {/* Header */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-14 items-end">
