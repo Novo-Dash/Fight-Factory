@@ -51,7 +51,7 @@ function FAQItem({ item }: { item: typeof faqItems[0] }) {
 export function FAQ() {
   return (
     <section style={{ background: '#FFFFFF', padding: '96px 0', position: 'relative' }}>
-      <TrianglePattern opacity={0.18} />
+      <TrianglePattern opacity={0.10} />
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative" style={{ zIndex: 1 }}>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16">
           {/* Left: header */}
