@@ -34,11 +34,6 @@ const benefits = [
   },
 ]
 
-const stats = [
-  { value: '250+', label: 'Active Students' },
-  { value: '5.0', label: 'Google Rating' },
-  { value: '30+', label: 'Years on the Mats' },
-]
 
 function ArrowRight() {
   return (

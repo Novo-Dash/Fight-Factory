@@ -1,6 +1,5 @@
 import { Badge } from '../ui/Badge'
 import { Button } from '../ui/Button'
-import { ImagePlaceholder } from '../ui/ImagePlaceholder'
 import { TrianglePattern } from '../ui/TrianglePattern'
 
 const features = [

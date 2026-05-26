@@ -1,4 +1,3 @@
-import { Badge } from '../ui/Badge'
 import { ImagePlaceholder } from '../ui/ImagePlaceholder'
 import { useModal } from '../../hooks/useModal'
 import { TrianglePattern } from '../ui/TrianglePattern'
