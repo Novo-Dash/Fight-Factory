@@ -74,7 +74,7 @@ function CredIcon({ type }: { type: string }) {
 
 export function Coach() {
   return (
-    <section style={{ background: '#FFFFFF', padding: '96px 0', position: 'relative' }}>
+    <section id="coach" style={{ background: '#FFFFFF', padding: '96px 0', position: 'relative' }}>
       <TrianglePattern opacity={0.10} />
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative" style={{ zIndex: 1 }}>
 
@@ -98,7 +98,7 @@ export function Coach() {
           <div className="md:col-span-5">
             <div className="rounded-3xl overflow-hidden" style={{ boxShadow: '0 8px 40px rgba(0,0,0,0.12)' }}>
               <img
-                src="/images/4.webp"
+                src="/images/8.webp"
                 alt="Coach Rodrigo Cabral"
                 className="w-full h-full object-cover aspect-[4/5]"
               />

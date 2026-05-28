@@ -109,7 +109,7 @@ function ProgramCard({ card }: { card: typeof cards[0] }) {
 
 export function Programs() {
   return (
-    <section style={{ background: '#FFFFFF', padding: '80px 0', position: 'relative' }}>
+    <section id="classes" style={{ background: '#FFFFFF', padding: '80px 0', position: 'relative' }}>
       <TrianglePattern opacity={0.10} />
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative" style={{ zIndex: 1 }}>
 

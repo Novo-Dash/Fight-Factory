@@ -54,8 +54,6 @@ export function Hero() {
         className="relative flex flex-col items-center text-center w-full max-w-5xl mx-auto px-4 md:px-8 py-20 opacity-0"
         style={{ zIndex: 2 }}
       >
-        <Badge className="mb-5 px-4 py-2 rounded-full text-white tracking-[0.12em]" style={{ background: 'linear-gradient(135deg, #262626 0%, #0A0A0A 100%)', border: '1px solid rgba(255,255,255,0.12)' }}>AUSTIN'S PREMIER BJJ ACADEMY</Badge>
-
         <h1
           className="text-white mb-5"
           style={{

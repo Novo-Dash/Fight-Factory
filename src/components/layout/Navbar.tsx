@@ -44,18 +44,24 @@ export function Navbar() {
           />
         </a>
 
-        {/* Center badge — desktop only */}
-        <div className="hidden md:flex items-center gap-1.5 text-sm">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M7 1L8.545 5.09H13L9.545 7.59L10.91 12L7 9.41L3.09 12L4.455 7.59L1 5.09H5.455L7 1Z" fill="#FBBC04" />
-          </svg>
-          <span
-            className="text-xs tracking-wide"
-            style={{ color: scrolled ? '#666666' : 'rgba(255,255,255,0.8)', transition: 'color 0.35s ease' }}
-          >
-            5.0 · 96 Google reviews
-          </span>
-        </div>
+        {/* Nav links — desktop only */}
+        <nav className="hidden md:flex items-center gap-7">
+          {[
+            { label: 'Classes', href: '#classes' },
+            { label: 'Reviews', href: '#reviews' },
+            { label: 'Coach', href: '#coach' },
+            { label: 'FAQ', href: '#faq' },
+          ].map(({ label, href }) => (
+            <a
+              key={href}
+              href={href}
+              className="text-sm font-medium transition-colors duration-200"
+              style={{ color: scrolled ? '#0A0A0A' : 'rgba(255,255,255,0.85)' }}
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
 
         {/* CTA */}
         <button

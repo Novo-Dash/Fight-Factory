@@ -24,6 +24,14 @@ function IconInstagram() {
   )
 }
 
+function IconFacebook() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+  )
+}
+
 const contactItems = [
   {
     icon: <IconPin />,
@@ -39,6 +47,11 @@ const contactItems = [
     icon: <IconInstagram />,
     text: '@fightfactory_jiujitsu',
     href: 'https://instagram.com/fightfactory_jiujitsu',
+  },
+  {
+    icon: <IconFacebook />,
+    text: 'BrazilianFightFactory',
+    href: 'https://www.facebook.com/BrazilianFightFactory',
   },
 ]
 
@@ -64,7 +77,7 @@ export function Footer() {
 
       {/* Dark info section */}
       <div style={{
-        background: 'linear-gradient(rgba(10,10,10,0.90), rgba(10,10,10,0.90)), url("/images/6.webp") center/cover no-repeat',
+        background: '#0A0A0A',
         padding: '64px 0',
       }}>
         <div className="max-w-7xl mx-auto px-4 md:px-8">

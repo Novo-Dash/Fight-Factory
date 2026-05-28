@@ -28,13 +28,13 @@ export default function App() {
       <main>
         <Hero />
         <Marquee />
-        <WhyBeginners />
         <Programs />
+        <WhyBeginners />
         <Process />
         <Gallery />
-        <Coach />
         <Testimonials />
         <Facility />
+        <Coach />
         <FAQ />
       </main>
       <Footer />

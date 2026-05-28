@@ -47,13 +47,13 @@ export function Testimonials() {
   ]
 
   return (
-    <section style={{ background: '#FFFFFF', padding: '96px 0', overflow: 'hidden', position: 'relative' }}>
+    <section id="reviews" style={{ background: '#FFFFFF', padding: '96px 0', overflow: 'hidden', position: 'relative' }}>
       <TrianglePattern opacity={0.10} />
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative" style={{ zIndex: 1 }}>
 
         {/* Title */}
         <div className="text-center mb-6">
-          <h2
+          <h5
             style={{
               fontFamily: 'Anton, sans-serif',
               fontSize: 'clamp(2rem, 5vw + 0.5rem, 4rem)',
@@ -63,7 +63,7 @@ export function Testimonials() {
             }}
           >
             <span className="text-[#0A0A0A]">What they say About Us</span>
-          </h2>
+          </h5>
         </div>
 
         {/* Rating pill */}
