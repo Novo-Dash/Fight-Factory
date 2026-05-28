@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import { useModal } from '../../hooks/useModal'
 
 const contactItems = [
   {
@@ -32,7 +31,6 @@ const quickLinks = [
 ]
 
 export function Footer() {
-  const { openModal } = useModal()
   const cardRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
