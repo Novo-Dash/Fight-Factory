@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import { Badge } from '../ui/Badge'
 import { Button } from '../ui/Button'
 
 export function Hero() {
