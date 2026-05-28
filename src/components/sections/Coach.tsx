@@ -1,187 +1,182 @@
 import { Button } from '../ui/Button'
-import { TrianglePattern } from '../ui/TrianglePattern'
 
-const credentials = [
-  {
-    icon: 'clock',
-    label: 'EXPERIENCE',
-    value: '30+ Years on the Mats',
-  },
-  {
-    icon: 'award',
-    label: 'BELT RANK',
-    value: '5th Degree Black Belt',
-  },
-  {
-    icon: 'trophy',
-    label: 'NOTABLE STUDENT',
-    value: 'UFC BJJ Champion',
-  },
-  {
-    icon: 'star',
-    label: 'ACHIEVEMENT',
-    value: 'Champion Trainer',
-  },
-  {
-    icon: 'shield',
-    label: 'TEACHING METHOD',
-    value: 'Beginner Friendly',
-  },
-  {
-    icon: 'people',
-    label: 'LEGACY',
-    value: 'Andrew Tackett\'s Coach',
-  },
+const stats = [
+  { value: '30+', label: 'Years on the Mats' },
+  { value: '5°', label: 'Black Belt' },
+  { value: 'UFC', label: 'Champion Trainer' },
 ]
-
-function CredIcon({ type }: { type: string }) {
-  const map: Record<string, React.ReactNode> = {
-    clock: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
-      </svg>
-    ),
-    award: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="8" r="6" /><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
-      </svg>
-    ),
-    trophy: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M6 9H4a2 2 0 0 1-2-2V5h4" /><path d="M18 9h2a2 2 0 0 0 2-2V5h-4" />
-        <path d="M12 17v4" /><path d="M8 21h8" /><path d="M6 3h12v8a6 6 0 0 1-12 0V3z" />
-      </svg>
-    ),
-    star: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-      </svg>
-    ),
-    shield: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-    ),
-    people: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-    ),
-  }
-  return <>{map[type]}</>
-}
 
 export function Coach() {
   return (
-    <section id="coach" style={{ background: '#FFFFFF', padding: '96px 0', position: 'relative' }}>
-      <TrianglePattern opacity={0.10} />
-      <div className="max-w-7xl mx-auto px-4 md:px-8 relative" style={{ zIndex: 1 }}>
+    <section
+      id="coach"
+      className="relative overflow-hidden"
+      style={{
+        background: 'linear-gradient(160deg, #1c1c1e 0%, #111 60%, #0A0A0A 100%)',
+        padding: '96px 0',
+      }}
+    >
+      {/* Red glow */}
+      <div className="absolute pointer-events-none" style={{
+        top: '50%', left: '20%', transform: 'translate(-50%, -50%)',
+        width: '600px', height: '600px',
+        background: 'radial-gradient(ellipse, rgba(204,0,0,0.09) 0%, transparent 65%)',
+      }} />
 
-        {/* Section title */}
-        <h2
-          className="mb-12"
-          style={{
-            fontFamily: 'Anton, sans-serif',
-            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-            letterSpacing: '0.01em',
-            lineHeight: '1.0',
-            textTransform: 'uppercase',
-          }}
-        >
-          <span className="text-[#0A0A0A]">Meet the Coach</span>
-        </h2>
+      <div className="max-w-6xl mx-auto px-4 md:px-8 relative" style={{ zIndex: 1 }}>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-start">
+          {/* LEFT — photo card */}
+          <div className="md:col-span-5 relative">
 
-          {/* Left — photo */}
-          <div className="md:col-span-5">
-            <div className="rounded-3xl overflow-hidden" style={{ boxShadow: '0 8px 40px rgba(0,0,0,0.12)' }}>
+            {/* Offset frame */}
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              top: 16,
+              left: 16,
+              borderRadius: '20px',
+              border: '1.5px solid rgba(204,0,0,0.4)',
+              zIndex: 0,
+            }} />
+
+            {/* Photo card */}
+            <div style={{
+              position: 'relative',
+              zIndex: 1,
+              borderRadius: '20px',
+              overflow: 'hidden',
+              boxShadow: '0 32px 80px rgba(0,0,0,0.5)',
+              border: '1px solid rgba(255,255,255,0.08)',
+              aspectRatio: '3/4',
+            }}>
               <img
                 src="/images/8.webp"
                 alt="Coach Rodrigo Cabral"
-                className="w-full h-full object-cover aspect-[4/5]"
+                className="w-full h-full object-cover object-top"
               />
+
+              {/* Bottom overlay */}
+              <div style={{
+                position: 'absolute', inset: 0,
+                background: 'linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.75) 100%)',
+              }} />
+
+              {/* Floating badge */}
+              <div style={{
+                position: 'absolute', bottom: 20, left: 20, right: 20,
+                background: 'rgba(0,0,0,0.6)',
+                backdropFilter: 'blur(16px)',
+                WebkitBackdropFilter: 'blur(16px)',
+                border: '1px solid rgba(255,255,255,0.1)',
+                borderRadius: '14px',
+                padding: '14px 16px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}>
+                <div>
+                  <div style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.6rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 700, marginBottom: 4 }}>
+                    Head Instructor
+                  </div>
+                  <div style={{ color: '#fff', fontWeight: 700, fontSize: '0.9375rem' }}>
+                    Rodrigo Cabral
+                  </div>
+                </div>
+                <div style={{
+                  background: 'rgba(204,0,0,0.2)',
+                  border: '1px solid rgba(204,0,0,0.45)',
+                  borderRadius: '8px',
+                  padding: '6px 10px',
+                  color: '#CC0000',
+                  fontSize: '0.6875rem',
+                  fontWeight: 700,
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  whiteSpace: 'nowrap',
+                }}>
+                  5th Degree
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Right — info */}
-          <div className="md:col-span-7 flex flex-col gap-4">
+          {/* RIGHT — content */}
+          <div className="md:col-span-7 flex flex-col gap-7 md:pl-6">
 
-            {/* Header card */}
-            <div
-              className="rounded-2xl p-6"
-              style={{ background: 'linear-gradient(135deg, #262626 0%, #0A0A0A 100%)' }}
-            >
-              <span
-                className="inline-block mb-3"
-                style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.6875rem', letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 700 }}
-              >
-                Head Instructor
-              </span>
-              <h3
-                className="text-white mb-4"
-                style={{ fontFamily: 'Anton, sans-serif', fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', letterSpacing: '0.01em', lineHeight: '1.0', textTransform: 'uppercase' }}
-              >
-                Rodrigo Cabral
-              </h3>
-              {/* Belt badge */}
-              <span
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full"
-                style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)' }}
-              >
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2" strokeLinecap="round">
-                  <circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" />
-                </svg>
-                <span style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.6875rem', letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 700 }}>
-                  5th Degree Black Belt
-                </span>
+            {/* Eyebrow */}
+            <div className="flex items-center gap-3">
+              <div style={{ width: 28, height: 2, background: '#CC0000', borderRadius: 9999 }} />
+              <span style={{ color: '#CC0000', fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 700 }}>
+                Meet Rodrigo, head coach
               </span>
             </div>
 
-            {/* Credentials grid */}
-            <div className="grid grid-cols-2 gap-3">
-              {credentials.map((c) => (
-                <div
-                  key={c.label}
-                  className="flex items-start gap-3 rounded-xl p-4"
-                  style={{ background: '#FFFFFF', border: '1px solid #E8E8E8' }}
-                >
-                  {/* Icon */}
-                  <div
-                    className="shrink-0 w-9 h-9 rounded-lg flex items-center justify-center"
-                    style={{ background: 'linear-gradient(135deg, #262626 0%, #0A0A0A 100%)' }}
-                  >
-                    <CredIcon type={c.icon} />
+            {/* Name */}
+            <h2 style={{
+              fontFamily: 'Anton, sans-serif',
+              fontSize: 'clamp(2.75rem, 4.5vw, 4rem)',
+              letterSpacing: '0.01em',
+              lineHeight: 1,
+              textTransform: 'uppercase',
+              color: '#FFFFFF',
+            }}>
+              Rodrigo Cabral
+            </h2>
+
+            {/* Stats row */}
+            <div className="flex gap-8" style={{
+              borderTop: '1px solid rgba(255,255,255,0.1)',
+              borderBottom: '1px solid rgba(255,255,255,0.1)',
+              padding: '20px 0',
+            }}>
+              {stats.map((s, i) => (
+                <div key={i}>
+                  <div style={{
+                    fontFamily: 'Anton, sans-serif',
+                    fontSize: 'clamp(1.5rem, 2.5vw, 2.25rem)',
+                    color: '#fff', lineHeight: 1, letterSpacing: '0.02em',
+                  }}>
+                    {s.value}
                   </div>
-                  {/* Text */}
-                  <div className="min-w-0">
-                    <div style={{ color: '#AAAAAA', fontSize: '0.6rem', letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 700, marginBottom: '2px' }}>
-                      {c.label}
-                    </div>
-                    <div className="text-[#0A0A0A] font-semibold leading-tight" style={{ fontSize: '0.8125rem' }}>
-                      {c.value}
-                    </div>
+                  <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.7rem', letterSpacing: '0.06em', marginTop: 4 }}>
+                    {s.label}
                   </div>
                 </div>
               ))}
             </div>
 
             {/* Bio */}
-            <p
-              className="text-[#555555]"
-              style={{ fontSize: 'clamp(0.9375rem, 0.5vw + 0.875rem, 1rem)', lineHeight: '1.75' }}
-            >
-              Rodrigo Cabral, with over 30 years on the mats, developed the method that helped shape current UFC BJJ champion Andrew Tackett, combining elite technique with a beginner-friendly teaching style. You can experience his method yourself in a free trial class.
+            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.9375rem', lineHeight: '1.8', maxWidth: '440px' }}>
+              Rodrigo Cabral, with over 30 years on the mats, developed the method that helped shape current Andrew Tackett champion Andrew Tackett, combining elite technique with a beginner-friendly teaching style. You can experience his method yourself in a free trial class.
             </p>
 
-            <div>
-              <Button size="md" openModal>
-                Book Your Free Trial Class →
-              </Button>
+            {/* Credentials */}
+            <div className="flex flex-col gap-3">
+              {[
+                { label: 'Notable Student', value: 'Andrew Tackett — UFC BJJ Champion' },
+                { label: 'Teaching Method', value: 'Unique beginner onboarding system' },
+                { label: 'Location', value: 'Austin, TX' },
+              ].map((c) => (
+                <div key={c.label} className="flex items-center gap-4">
+                  <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#CC0000', flexShrink: 0 }} />
+                  <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '0.12em', fontWeight: 700, minWidth: 110 }}>
+                    {c.label}
+                  </span>
+                  <span style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.875rem' }}>
+                    {c.value}
+                  </span>
+                </div>
+              ))}
             </div>
 
+            <div>
+              <Button size="lg" variant="red" openModal>
+                Book your free trial class →
+              </Button>
+            </div>
           </div>
+
         </div>
       </div>
     </section>

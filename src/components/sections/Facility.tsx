@@ -54,7 +54,7 @@ export function Facility() {
                 </li>
               ))}
             </ul>
-            <Button size="md" openModal>
+            <Button size="md" variant="red" openModal>
               Click for a free trial class →
             </Button>
           </div>

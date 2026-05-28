@@ -68,12 +68,9 @@ export function Navbar() {
           onClick={handleCTA}
           className="text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:scale-[1.02] transition-all duration-200 min-h-[40px] min-w-[44px] cursor-pointer shrink-0"
           style={{
-            background: scrolled
-              ? 'linear-gradient(135deg, #262626 0%, #0A0A0A 100%)'
-              : 'rgba(255,255,255,0.15)',
-            border: scrolled ? 'none' : '1px solid rgba(255,255,255,0.4)',
-            backdropFilter: scrolled ? 'none' : 'blur(8px)',
-            transition: 'background 0.35s ease, border 0.35s ease',
+            background: '#CC0000',
+            border: 'none',
+            transition: 'background 0.2s ease',
           }}
         >
           Book Free Trial

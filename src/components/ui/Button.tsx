@@ -2,7 +2,7 @@ import { cn } from '../../lib/utils'
 import { useModal } from '../../hooks/useModal'
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'ghost'
+  variant?: 'primary' | 'secondary' | 'ghost' | 'white' | 'red'
   size?: 'sm' | 'md' | 'lg'
   openModal?: boolean
 }
@@ -37,6 +37,8 @@ export function Button({
         size === 'md' && 'px-6 py-3 text-sm min-h-[44px]',
         size === 'lg' && 'px-8 py-4 text-base min-h-[52px]',
         variant === 'primary' && 'bg-gradient-to-br from-[#262626] to-[#0A0A0A] text-white hover:from-[#333333] hover:to-[#1A1A1A] hover:scale-[1.02] active:scale-[0.99]',
+        variant === 'white' && 'bg-white text-[#0A0A0A] hover:bg-[#F0F0F0] shadow-[0_4px_24px_rgba(255,255,255,0.25)] hover:shadow-[0_6px_32px_rgba(255,255,255,0.35)] hover:scale-[1.03] active:scale-[0.98]',
+        variant === 'red' && 'bg-[#CC0000] text-white hover:bg-[#B30000] shadow-[0_4px_24px_rgba(204,0,0,0.35)] hover:shadow-[0_6px_32px_rgba(204,0,0,0.5)] hover:scale-[1.03] active:scale-[0.98]',
         variant === 'secondary' && 'border border-[#D8D8D8] text-[#0A0A0A] hover:border-[#0A0A0A] bg-transparent',
         variant === 'ghost' && 'text-[#666666] hover:text-[#0A0A0A] bg-transparent',
         className

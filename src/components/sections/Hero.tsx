@@ -98,7 +98,7 @@ export function Hero() {
           </span>
         </div>
 
-        <Button size="lg" openModal className="text-base">
+        <Button size="lg" variant="red" openModal className="text-base">
           Book a Free Trial Class →
         </Button>
       </div>

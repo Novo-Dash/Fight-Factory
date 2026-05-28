@@ -228,7 +228,7 @@ export function LeadModal() {
                 <button
                   type="submit"
                   disabled={formState === 'loading'}
-                  className="w-full bg-gradient-to-br from-[#262626] to-[#0A0A0A] text-white font-semibold py-3.5 rounded-full hover:from-[#333333] hover:to-[#1A1A1A] transition-all duration-200 hover:scale-[1.01] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer min-h-[44px]"
+                  className="w-full bg-[#CC0000] hover:bg-[#B30000] text-white font-semibold py-3.5 rounded-full transition-all duration-200 hover:scale-[1.01] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer min-h-[44px]"
                   style={{ fontSize: '16px' }}
                 >
                   {formState === 'loading' ? 'Sending...' : 'Book Free Trial Class →'}

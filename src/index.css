@@ -81,6 +81,17 @@ body {
   100% { transform: translate(0px,   0px); }
 }
 
+@keyframes footer-drift-left {
+  0%   { transform: translateX(-3%) }
+  50%  { transform: translateX(-1%) }
+  100% { transform: translateX(-3%) }
+}
+@keyframes footer-drift-right {
+  0%   { transform: translateX(6%) }
+  50%  { transform: translateX(8%) }
+  100% { transform: translateX(6%) }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

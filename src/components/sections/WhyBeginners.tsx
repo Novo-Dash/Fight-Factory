@@ -82,11 +82,11 @@ export function WhyBeginners() {
 
             <button
               onClick={openModal}
-              className="inline-flex items-center gap-2 text-white font-semibold px-7 py-3.5 rounded-full hover:scale-[1.02] transition-all duration-200 cursor-pointer"
+              className="inline-flex items-center gap-2 text-white font-semibold px-7 py-3.5 rounded-full hover:scale-[1.02] hover:bg-[#B30000] transition-all duration-200 cursor-pointer"
               style={{
-                background: 'linear-gradient(135deg, #262626 0%, #0A0A0A 100%)',
+                background: '#CC0000',
                 fontSize: '0.9375rem',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.18)',
+                boxShadow: '0 4px 20px rgba(204,0,0,0.3)',
               }}
             >
               Book a free trial class
@@ -97,74 +97,24 @@ export function WhyBeginners() {
 
           </div>
 
-          {/* Right — phone mockup */}
+          {/* Right — image card */}
           <div className="flex justify-center items-center">
             <div
-              className="relative"
               style={{
-                width: '310px',
-                aspectRatio: '9/19.5',
-                background: 'linear-gradient(160deg, #2a2a2a 0%, #0d0d0d 100%)',
-                borderRadius: '44px',
-                padding: '10px',
-                boxShadow: '0 40px 100px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.12), inset 0 -1px 0 rgba(0,0,0,0.4)',
-                border: '1px solid rgba(255,255,255,0.08)',
+                borderRadius: '20px',
+                overflow: 'hidden',
+                boxShadow: '0 24px 64px rgba(0,0,0,0.15)',
+                border: '1px solid rgba(0,0,0,0.08)',
+                width: '100%',
+                maxWidth: '480px',
+                aspectRatio: '4/5',
               }}
             >
-              {/* Side buttons — volume */}
-              <div style={{ position: 'absolute', left: '-3px', top: '90px', width: '3px', height: '28px', background: '#1a1a1a', borderRadius: '2px 0 0 2px' }} />
-              <div style={{ position: 'absolute', left: '-3px', top: '128px', width: '3px', height: '28px', background: '#1a1a1a', borderRadius: '2px 0 0 2px' }} />
-              {/* Side button — power */}
-              <div style={{ position: 'absolute', right: '-3px', top: '110px', width: '3px', height: '48px', background: '#1a1a1a', borderRadius: '0 2px 2px 0' }} />
-
-              {/* Screen */}
-              <div
-                className="relative w-full h-full overflow-hidden"
-                style={{ borderRadius: '36px', background: '#000' }}
-              >
-                {/* Video */}
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-full object-cover"
-                  style={{ transform: 'translateZ(0)', backfaceVisibility: 'hidden' }}
-                >
-                  <source src="/videos/2.webm" type="video/webm" />
-                  <source src="/videos/2.mp4" type="video/mp4" />
-                </video>
-
-                {/* Dynamic island */}
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: '10px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    width: '72px',
-                    height: '20px',
-                    background: '#000',
-                    borderRadius: '12px',
-                    zIndex: 10,
-                  }}
-                />
-
-                {/* Bottom home indicator */}
-                <div
-                  style={{
-                    position: 'absolute',
-                    bottom: '8px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    width: '80px',
-                    height: '4px',
-                    background: 'rgba(255,255,255,0.35)',
-                    borderRadius: '9999px',
-                    zIndex: 10,
-                  }}
-                />
-              </div>
+              <img
+                src="/images/9.jpg"
+                alt="Fight Factory Jiu-Jitsu"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
+              />
             </div>
           </div>
 

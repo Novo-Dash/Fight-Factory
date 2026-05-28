@@ -1,4 +1,3 @@
-import { ImagePlaceholder } from '../ui/ImagePlaceholder'
 import { useModal } from '../../hooks/useModal'
 import { TrianglePattern } from '../ui/TrianglePattern'
 
@@ -55,11 +54,7 @@ function ProgramCard({ card }: { card: typeof cards[0] }) {
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
         ) : (
-          <ImagePlaceholder
-            className="w-full h-full transition-transform duration-700 group-hover:scale-105"
-            aspectRatio=""
-            label={card.label}
-          />
+          <div className="w-full h-full bg-[#1a1a1a]" />
         )}
       </div>
 

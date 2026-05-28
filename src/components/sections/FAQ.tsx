@@ -69,7 +69,7 @@ export function FAQ() {
             >
               Common Questions
             </h2>
-            <Button size="md" openModal className="mt-4">
+            <Button size="md" variant="red" openModal className="mt-4">
               Click to book your free trial class →
             </Button>
           </div>
