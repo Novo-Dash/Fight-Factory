@@ -1,6 +1,5 @@
-import { ModalContext, useModalState } from './hooks/useModal'
-import { useUTMs } from './hooks/useUTMs'
 import { useScrollDepth } from './hooks/useScrollDepth'
+import { BookingProvider } from './booking/BookingProvider'
 import { Navbar } from './components/layout/Navbar'
 import { Footer } from './components/sections/Footer'
 import {
@@ -14,16 +13,13 @@ import {
   Facility,
   FAQ,
 } from './components/sections'
-import { LeadModal } from './components/ui/LeadModal'
 import { Marquee } from './components/ui/Marquee'
 
 export default function App() {
-  const modal = useModalState()
-  useUTMs()
   useScrollDepth()
 
   return (
-    <ModalContext.Provider value={modal}>
+    <BookingProvider>
       <Navbar />
       <main>
         <Hero />
@@ -38,7 +34,6 @@ export default function App() {
         <FAQ />
       </main>
       <Footer />
-      <LeadModal />
-    </ModalContext.Provider>
+    </BookingProvider>
   )
 }
